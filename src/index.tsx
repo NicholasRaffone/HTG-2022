@@ -3,11 +3,19 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { Toaster } from 'react-hot-toast';
+
+import {
+  BrowserRouter as Router,
+} from "react-router-dom";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <Router>
+    <React.StrictMode>
+      <App />
+      <Toaster position='top-right' toastOptions={{duration:2000}}/>
+    </React.StrictMode>
+  </Router>,
   document.getElementById('root')
 );
 
